@@ -5,6 +5,7 @@ type Satellite struct {
 	CoordinateX float32
 	CoordinateY float32
 	Distance    float32
+	Message     []string
 }
 
 func (s *Satellite) GetCoordinates() (coordinateX, coordinateY float32) {
@@ -30,4 +31,12 @@ func (s *Satellite) GetDistance() (distance float32) {
 
 func (s *Satellite) SetDistance(distance float32) {
 	s.Distance = distance
+}
+
+func (s *Satellite) SetMessage(message []string) {
+	s.Message = message
+}
+
+func (s *Satellite) GetMessage() (message []string) {
+	return s.Message
 }
