@@ -41,7 +41,7 @@ C:\Users\..\MeLi> gcloud app deploy
 
 | Body | Type     | Descripcion                |
 | :-------- | :------- | :------------------------- |
-| `satellites` | `json` | **Requeridoc**
+| `satellites` | `json` | **Requerido**
 
 #### topsecret/{satellite_name}
 
