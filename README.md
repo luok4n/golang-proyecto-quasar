@@ -46,7 +46,7 @@ C:\Users\..\MeLi> gcloud app deploy
 #### topsecret/{satellite_name}
 
 ```http
-  GET POST api/topsecret/{satellite_name}/api/items/${id}
+  GET POST api/topsecret/{satellite_name}
 ```
 
 | Parametro/Body | Type     | Descripcion                       |
