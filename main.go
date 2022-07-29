@@ -15,7 +15,7 @@ func main() {
 	routes.SetServicesRoutes(router)
 
 	server := http.Server{
-		Addr:    ":9000",
+		Addr:    ":8080",
 		Handler: router,
 	}
 
