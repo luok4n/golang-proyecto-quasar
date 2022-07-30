@@ -128,7 +128,7 @@ func GetDataOrdered(names []string, distance []float32, message [3][]string) (di
 }
 
 //Function to get/set the message and position by one satellite
-func GetGetTopSecretOneSatellite(satellite singleton.SatelliteBody) (coordinates singleton.ResultPosition, message string) {
+func GetTopSecretOneSatellite(satellite singleton.SatelliteBody) (coordinates singleton.ResultPosition, message string) {
 	satellites := singleton.GetInstance().GetSatellites()
 	message = ""
 	result := singleton.ResultPosition{}

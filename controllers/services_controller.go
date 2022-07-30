@@ -41,7 +41,7 @@ func TopSecret(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	result, message = GetGetTopSecretOneSatellite(satelliteBody)
+	result, message = GetTopSecretOneSatellite(satelliteBody)
 
 	if message != "" {
 		json, _ := json.Marshal(message)
