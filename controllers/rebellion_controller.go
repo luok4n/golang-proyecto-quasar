@@ -109,7 +109,7 @@ func GetLocation(distance1, distance2, distance3 float32) (x, y float32) {
 }
 
 //Function to get the coordinates ordered in the next order "kenobi" "skywalker" "sato"
-func GetCoordinatesOrdered(names []string, distance []float32, message [3][]string) (distanceOrdered [3]float32, messageOrdered [3][]string) {
+func GetDataOrdered(names []string, distance []float32, message [3][]string) (distanceOrdered [3]float32, messageOrdered [3][]string) {
 	var order [3]float32
 	var orderedMessage [3][]string
 	for i := 0; i < len(names); i++ {
@@ -160,7 +160,7 @@ func GetTopSecret(satellites []singleton.SatelliteBody) (coordinates singleton.R
 		distances[i] = satellites[i].Distance
 		messages[i] = satellites[i].Message
 	}
-	distanceOrder, messagesOrdered := GetCoordinatesOrdered(names[:], distances[:], messages)
+	distanceOrder, messagesOrdered := GetDataOrdered(names[:], distances[:], messages)
 	position.SetXY(GetLocation(distanceOrder[0], distanceOrder[1], distanceOrder[2]))
 	result.SetMessage(GetMessage(messagesOrdered[0], messagesOrdered[1], messagesOrdered[2]))
 	result.SetPositions(position)

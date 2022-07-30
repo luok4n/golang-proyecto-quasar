@@ -30,6 +30,20 @@ Para su despliegue en GoogleCloud es necesario correr el siguiente comando. Es r
 ```console
 C:\Users\..\MeLi> gcloud app deploy
 ```
+
+## Test
+
+Ir a la carpeta main 'unit_tests' correr el siguiente comando para su ejecucion 
+
+```console
+C:\Users\..\MeLi\unit_tests> go test
+```
+
+Para mas detalles en la ejecucion correr el siguiente comando 
+
+```console
+C:\Users\..\MeLi\unit_tests> go test -v
+```
     
 ## API
 
