@@ -70,4 +70,4 @@ C:\Users\..\MeLi\unit_tests> go test -v
 
 ## DIAGRAMAS
 
-* [Diagramas](https://github.com/luok4n/MeLi/tree/main/diagrams)
+* [Diagramas](https://github.com/luok4n/MeLi/tree/main/Diagrams)
