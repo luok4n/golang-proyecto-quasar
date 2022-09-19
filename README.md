@@ -1,5 +1,5 @@
 
-# MeLI: Operacion Fuego de Quasar
+# Operacion Fuego de Quasar
 
 Han Solo necesita nuestra ayuda para detectar la posicion y mensaje secreto proveniente de una nave portacarga imperial a la deriva.
 Por esta razon hemos cosntruido la siguiente API.
