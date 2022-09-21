@@ -1,4 +1,5 @@
-# Problema a resolver
+# Operacion Fuego de Quasar
+## Problema a resolver 
 
 Han Solo ha sido recientemente nombrado General de la Alianza Rebelde y busca dar un gran golpe contra el Imperio Galáctico para reavivar la llama de la resistencia.
 El servicio de inteligencia rebelde ha detectado un llamado de auxilio de una nave portacarga imperial a la deriva en un campo de asteroides. El manifiesto de la nave es ultra clasificado, pero se rumorea que transporta raciones y armamento para una legión entera.
@@ -8,9 +9,9 @@ El servicio de inteligencia rebelde ha detectado un llamado de auxilio de una na
 Como jefe de comunicaciones rebelde, tu misión es crear un programa en Golang que retorne la fuente y contenido del mensaje de auxilio. Para esto, cuentas con tres satélites que te permitirán triangular la posición, ¡pero cuidado! el mensaje puede no llegar completo a cada satélite debido al campo de asteroides frente a la nave.
 
 Posición de los satélites actualmente en servicio
-● Kenobi: [-500, -200]
-● Skywalker: [100, -100]
-● Sato: [500, 100]
+* Kenobi: [-500, -200]
+* Skywalker: [100, -100]
+* Sato: [500, 100]
 
 Nivel 1
 
@@ -25,13 +26,13 @@ func GetLocation(distances ...float32) (x, y float32)
 func GetMessage(messages ...[]string) (msg string)
 
 Consideraciones:
-    ● La unidad de distancia en los parámetros de GetLocation es la misma que la que se
+    * La unidad de distancia en los parámetros de GetLocation es la misma que la que se
     utiliza para indicar la posición de cada satélite.
-    ● El mensaje recibido en cada satélite se recibe en forma de arreglo de strings.
-    ● Cuando una palabra del mensaje no pueda ser determinada, se reemplaza por un string
+    * El mensaje recibido en cada satélite se recibe en forma de arreglo de strings.
+    * Cuando una palabra del mensaje no pueda ser determinada, se reemplaza por un string
     en blanco en el array.
         ○ Ejemplo: [“este”, “es”, “”, “mensaje”]
-    ● Considerar que existe un desfasaje (a determinar) en el mensaje que se recibe en cada satélite.
+    * Considerar que existe un desfasaje (a determinar) en el mensaje que se recibe en cada satélite.
         ○ Ejemplo:
             ■ Kenobi: [“”, “este”, “es”, “un”, “mensaje”] ■ Skywalker: [“este”, “”, “un”, “mensaje”]
             ■ Sato: [“”, ””, ”es”, ””, ”mensaje”]
@@ -47,19 +48,19 @@ POST  -> /topsecret/
 {
     "satellites": [
          {
-               “name”: "kenobi",
-               “distance”: 100.0,
-               “message”: ["este", "", "", "mensaje", ""]
+               "name": "kenobi",
+               "distance": 100.0,
+               "message": ["este", "", "", "mensaje", ""]
         },
         {
-                “name”: "skywalker",
-                “distance”: 115.5
-                “message”: ["", "es", "", "", "secreto"]
+                "name": "skywalker",
+                "distance": 115.5
+                "message": ["", "es", "", "", "secreto"]
         },
         {
-                “name”: "sato",
-                “distance”: 142.7
-                “message”: ["este", "", "un", "", ""]
+                "name": "sato",
+                "distance": 142.7
+                "message": ["este", "", "un", "", ""]
         }
     ]
 }
@@ -72,10 +73,11 @@ RESPONSE CODE: 200
 
 ```json
 {
-     "position": {
+     "position": 
+        {
             "x": -100.0,
             "y": 75.5 
-            },
+        },
      "message": "este es un mensaje secreto"
 }
 ```
@@ -99,7 +101,7 @@ POST -> /topsecret_split/{satellite_name}
 Crear un nuevo servicio /topsecret_split/ que acepte POST y GET. En el GET la respuesta deberá indicar la posición y el mensaje en caso que sea posible determinarlo y tener la misma estructura del ejemplo del Nivel 2. Caso contrario, deberá responder un mensaje de error indicando que no hay suficiente información.
 
 
-# Operacion Fuego de Quasar
+# Solucion Operacion Quasar
 
 Han Solo necesita nuestra ayuda para detectar la posicion y mensaje secreto proveniente de una nave portacarga imperial a la deriva.
 Por esta razon hemos cosntruido la siguiente API.
