@@ -26,16 +26,16 @@ func GetLocation(distances ...float32) (x, y float32)
 func GetMessage(messages ...[]string) (msg string)
 
 Consideraciones:
-    * La unidad de distancia en los parámetros de GetLocation es la misma que la que se
-    utiliza para indicar la posición de cada satélite.
-    * El mensaje recibido en cada satélite se recibe en forma de arreglo de strings.
-    * Cuando una palabra del mensaje no pueda ser determinada, se reemplaza por un string
-    en blanco en el array.
-        ○ Ejemplo: [“este”, “es”, “”, “mensaje”]
-    * Considerar que existe un desfasaje (a determinar) en el mensaje que se recibe en cada satélite.
-        ○ Ejemplo:
-            ■ Kenobi: [“”, “este”, “es”, “un”, “mensaje”] ■ Skywalker: [“este”, “”, “un”, “mensaje”]
-            ■ Sato: [“”, ””, ”es”, ””, ”mensaje”]
+ * La unidad de distancia en los parámetros de GetLocation es la misma que la que se
+ utiliza para indicar la posición de cada satélite.
+ * El mensaje recibido en cada satélite se recibe en forma de arreglo de strings.
+ * Cuando una palabra del mensaje no pueda ser determinada, se reemplaza por un string
+ en blanco en el array.
+     - Ejemplo: [“este”, “es”, “”, “mensaje”]
+ * Considerar que existe un desfasaje (a determinar) en el mensaje que se recibe en cada satélite.
+     - Ejemplo:
+         - Kenobi: [“”, “este”, “es”, “un”, “mensaje”] ■ Skywalker: [“este”, “”, “un”, “mensaje”]
+         - Sato: [“”, ””, ”es”, ””, ”mensaje”]
 
 
 Nivel 2
